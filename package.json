@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "pretty": "prettier . --write",
     "dev": "webpack-dev-server src/main.js",
-    "start": "yarn dev"
+    "start": "yarn dev",
+    "deploy": "sh publish.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
