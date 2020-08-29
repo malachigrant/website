@@ -1,6 +1,6 @@
 yarn build
 now="$(date +'%Y/%m/%d %r')"
-echo "Publish $now"
+echo "Deploy $now"
 cd dist
 git add .
 git commit -m "$now"
