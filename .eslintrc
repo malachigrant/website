@@ -9,6 +9,10 @@
       "version": "detect"
     }
   },
+  "rules": {
+    "react/no-children-prop": "off",
+    "react/prop-types": "off"
+  },
   "overrides": [
     {
       "files": ["__tests__/*.test.js"],

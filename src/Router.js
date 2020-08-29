@@ -4,7 +4,7 @@ import { HashRouter, Route } from 'react-router-dom';
 
 import HomePage from 'pages/HomePage';
 
-export const Router = ({}) => {
+export const Router = () => {
   return (
     <HashRouter>
       <Route path="/" component={HomePage} />

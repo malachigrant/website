@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import { useTheme } from 'hooks/Theme';
 
-export const AppBar = ({}) => {
+export const AppBar = () => {
   const theme = useTheme();
   const BarStyle = css`
     width: 100vw;
