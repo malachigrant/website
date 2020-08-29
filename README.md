@@ -1,17 +1,19 @@
 # Introduction
 
-This is a starter pack for React apps, aimed at beginners, but could easily be used by experts. Packages included are Webpack, Babel, React, ESLint, Prettier, and Emotion. These are what I have personally used, and I feel they work well together. ESLint config is setup to use recommended settings, and Prettier is set up to use my preferred configuration, feel free to change these if these defaults don't suit your needs.
-
-# Tool needed
-
-You will need yarn or npm. These instructions assume you use yarn, if you prefer npm, just replace `yarn` with `npm install` in the instructions.
+This is my starter website!
 
 # To run
 
-1. Fork this repository and clone it.
-2. Run `yarn`
-3. Run `yarn dev`
+1. Run `yarn`
+2. Run `yarn dev`
 
-# Linting and prettifying
+# Extra commands
 
-To 'prettify' your code, run `yarn pretty`. To check for linting errors, run `yarn lint`.
+1. To run prettier: `yarn pretty`
+2. To lint the code: `yarn lint`
+3. To publish: `yarn publish` (additional instructions below)
+
+# Publishing
+
+I am using Github Pages to host this website, which serves content from a repository.
+Rather than cluttering this repository, I opted to create a different repository inside of my /dist folder. Then I added a publish script to automatically build this and then commit and push to the other repository.

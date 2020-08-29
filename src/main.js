@@ -1,16 +1,25 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx, css, Global } from '@emotion/core';
 import ReactDOM from 'react-dom';
 
+import ThemeProvider from 'hooks/Theme';
 import App from 'App';
 
-const AppStyle = css`
-  display: flex;
+const GlobalStyle = css`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-size: 16px;
+  }
 `;
 
 ReactDOM.render(
-  <div css={AppStyle}>
+  <ThemeProvider>
+    <Global styles={GlobalStyle} />
     <App />
-  </div>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
