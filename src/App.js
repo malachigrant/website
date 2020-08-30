@@ -2,8 +2,6 @@
 import { jsx, css } from '@emotion/core';
 
 import { useTheme } from 'hooks/Theme';
-import Column from 'components/layout/Column';
-import { AppBar } from 'components/AppBar';
 import Router from 'Router';
 
 export const App = () => {
@@ -15,10 +13,7 @@ export const App = () => {
   `;
   return (
     <div css={AppStyle}>
-      <Column>
-        <AppBar />
-        <Router />
-      </Column>
+      <Router />
     </div>
   );
 };

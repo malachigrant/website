@@ -5,6 +5,7 @@ import { useContext, createContext } from 'react';
 const theme = {
   color: {
     primary: '#4343e6',
+    hover: '#5353f6',
     neutral: [
       '#ffffff',
       '#f4f4f4',

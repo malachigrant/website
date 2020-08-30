@@ -2,8 +2,42 @@
 
 exports[`App renders correctly 1`] = `
 <div
-  className="css-1podhy4-Style"
+  className="css-q1xiu8-AppStyle"
 >
-  Welcome to my template!
+  <div
+    className="css-5wcip0-Style"
+  >
+    <div
+      className="css-mjo8op-BarStyle"
+    >
+      <div
+        className="css-1lka53x-LinkStyle"
+      >
+        <a
+          href="#/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </div>
+      <div
+        className="css-1lka53x-LinkStyle"
+      >
+        <a
+          href="#/theme"
+          onClick={[Function]}
+        >
+          Theme
+        </a>
+      </div>
+    </div>
+    <div
+      className="css-1be657r-CardStyle"
+    >
+      <div>
+        Hello
+      </div>
+    </div>
+  </div>
 </div>
 `;
