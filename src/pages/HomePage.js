@@ -1,13 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
+import { Col } from 'components/layout';
 import Card from 'components/Card';
 
 export const HomePage = () => {
   return (
-    <Card width={4 / 5}>
-      <div>Hello</div>
-    </Card>
+    <Col width={4 / 5}>
+      <Card>
+        <div>Hello</div>
+      </Card>
+    </Col>
   );
 };
 
