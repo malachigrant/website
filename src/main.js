@@ -2,6 +2,7 @@
 import { jsx, css, Global } from '@emotion/core';
 import ReactDOM from 'react-dom';
 
+import GlobalStateProvider from 'hooks/GlobalState';
 import ThemeProvider from 'hooks/Theme';
 import App from 'App';
 
@@ -100,9 +101,11 @@ const GlobalStyle = css`
 `;
 
 ReactDOM.render(
-  <ThemeProvider>
-    <Global styles={GlobalStyle} />
-    <App />
-  </ThemeProvider>,
+  <GlobalStateProvider>
+    <ThemeProvider>
+      <Global styles={GlobalStyle} />
+      <App />
+    </ThemeProvider>
+  </GlobalStateProvider>,
   document.getElementById('root')
 );
