@@ -5,7 +5,7 @@ exports[`App renders correctly 1`] = `
   className="css-q1xiu8-AppStyle"
 >
   <div
-    className="css-5wcip0-Style"
+    className="css-18sacga-Style"
   >
     <div
       className="css-mjo8op-BarStyle"
@@ -30,12 +30,26 @@ exports[`App renders correctly 1`] = `
           Theme
         </a>
       </div>
+      <div
+        className="css-1lka53x-LinkStyle"
+      >
+        <a
+          href="#/todo"
+          onClick={[Function]}
+        >
+          Todo
+        </a>
+      </div>
     </div>
     <div
-      className="css-1be657r-CardStyle"
+      className="css-1kbjgb5-Style"
     >
-      <div>
-        Hello
+      <div
+        className="css-7mdap-CardStyle"
+      >
+        <div>
+          Hello
+        </div>
       </div>
     </div>
   </div>
