@@ -14,7 +14,8 @@
     "pretty": "prettier . --write",
     "dev": "webpack-dev-server src/main.js",
     "start": "yarn dev",
-    "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh",
+    "ready": "yarn pretty && yarn lint && yarn test"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
@@ -29,6 +30,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-react": "^7.20.6",
+    "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.3.0",
     "html-webpack-template": "^6.2.0",
     "husky": "^4.2.5",
