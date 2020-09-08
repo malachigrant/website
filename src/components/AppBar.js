@@ -1,30 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { Link } from 'react-router-dom';
 
 import { useTheme } from 'hooks/Theme';
+import { HoverMenu } from 'components/HoverMenu';
 
 import routeConfig from 'Router/routeConfig';
-
-const AppBarLink = ({ name, ...props }) => {
-  const theme = useTheme();
-  const LinkStyle = css`
-    > a {
-      display: block;
-      padding: 0.5rem;
-      color: ${theme.color.neutral[1]};
-      text-decoration: none;
-    }
-    &:hover {
-      background-color: ${theme.color.hover};
-    }
-  `;
-  return (
-    <div css={LinkStyle}>
-      <Link {...props}>{name}</Link>
-    </div>
-  );
-};
 
 export const AppBar = () => {
   const theme = useTheme();
@@ -36,8 +16,19 @@ export const AppBar = () => {
   `;
   return (
     <div css={BarStyle}>
-      {routeConfig.map(({ path, name }, i) => (
-        <AppBarLink key={i} to={path} name={name} />
+      {routeConfig.map(({ path, name, subRoutes }, i) => (
+        <HoverMenu
+          key={i}
+          name={name}
+          path={path}
+          options={
+            !!subRoutes &&
+            subRoutes.map((subRoute) => ({
+              name: subRoute.name,
+              path: subRoute.path,
+            }))
+          }
+        />
       ))}
     </div>
   );
