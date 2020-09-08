@@ -4,5 +4,5 @@ echo "Deploy $now"
 cd dist
 git add .
 git commit -m "$now"
-git push
+git push origin master
 cd ..
