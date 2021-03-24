@@ -11,7 +11,6 @@ export const Router = () => {
   return (
     <HashRouter>
       <Col>
-        <AppBar />
         {config.map(({ subRoutes, path, component, exact }, i) => (
           <Route
             key={i}
