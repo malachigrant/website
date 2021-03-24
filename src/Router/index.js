@@ -4,7 +4,6 @@ import { HashRouter, Route } from 'react-router-dom';
 import React from 'react';
 
 import { Col } from 'components/layout';
-import { AppBar } from 'components/AppBar';
 import config from './routeConfig';
 
 export const Router = () => {
