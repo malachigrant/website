@@ -39,7 +39,7 @@ export const HomePage = () => {
           This is where GPU programming can give a massive performance boost. An average CPU may have around eight cores. But a GPU could have hundreds or thousands.`}
         </p>
         <img src={cpu_gpu_comparison}></img>
-        <div class="imageFooter">
+        <div className="imageFooter">
           <span>{'Image from '}</span>
           <a href="https://www.omnisci.com/technical-glossary/cpu-vs-gpu">
             https://www.omnisci.com/technical-glossary/cpu-vs-gpu
