@@ -12,20 +12,24 @@ import cuArrayTransfers from 'julia/cuarray_transfers.jl';
 import gpuKernelAdd from 'julia/gpu_kernel_add.jl';
 
 const Block = ({ text }) => {
-  return <CodeBlock
-            showLineNumbers={false}
-            theme={dracula}
-            language="julia"
-            text={text}
-          />
-}
+  return (
+    <CodeBlock
+      showLineNumbers={false}
+      theme={dracula}
+      language="julia"
+      text={text}
+    />
+  );
+};
 
 const Link = ({ className, label, url }) => {
-  return <div className={className}>
+  return (
+    <div className={className}>
       {label && <span>{label}</span>}
       <a href={url}>{url}</a>
     </div>
-}
+  );
+};
 
 export const HomePage = () => {
   const CardStyle = css`
@@ -64,19 +68,21 @@ export const HomePage = () => {
           This is where GPU programming can give a massive performance boost. An average CPU may have around four to eight cores. But a GPU could have hundreds or even thousands.`}
         </p>
         <img src={cpu_gpu_comparison}></img>
-        <Link className="imageFooter" label="Image from " url="https://www.omnisci.com/technical-glossary/cpu-vs-gpu" />
+        <Link
+          className="imageFooter"
+          label="Image from "
+          url="https://www.omnisci.com/technical-glossary/cpu-vs-gpu"
+        />
         <h2>Parallel Programming on a CPU</h2>
         <p>
           {`Before we learn how to parallel program on a GPU, we need to understand how to do it on a CPU. In order to start thinking about parallel programming, we can imagine a situation where we wanted to take two large arrays and add each element of the arrays and put the result into a third array. To do this, we could use a for loop to go through each element of the arrays and add them together into the third array. The code would look something like this.
           `}
         </p>
-        <Block
-          text={sequentialAdd}
-        />
+        <Block text={sequentialAdd} />
         <p>
           {`This, however, would be very slow. To speed it up, we could use different CPU cores in our machine to add different elements of the array. To do this in Julia, we can simply convert our for loop to a parallel for loop by adding the @threads macro to the for loop, like so.`}
         </p>
-        <Block text={cpuParallelAdd}/>
+        <Block text={cpuParallelAdd} />
         <p>
           {`This essentially just tells the compiler to run multiple iterations of this loop at the same time. So if you are using four threads, Julia can run up to four iterations at once, giving you a potential performance increase of 4x. Realistically, however, your computer will be doing tasks in the background, and there will be some overhead for this parallelization, so you may get less of a performance boost than you expect. On my machine, benchmarking both of these functions, I got around a 3.5x performance boost with the parallel loop. `}
         </p>

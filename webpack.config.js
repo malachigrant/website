@@ -70,8 +70,8 @@ module.exports = {
       },
       {
         test: /\.jl/,
-        use: 'raw-loader'
-      }
+        use: 'raw-loader',
+      },
     ],
   },
   resolve: {
