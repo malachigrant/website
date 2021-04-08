@@ -10,6 +10,7 @@ export const App = () => {
     width: 100vw;
     height: 100vh;
     background-color: ${theme.color.neutral[1]};
+    overflow: auto;
   `;
   return (
     <div css={AppStyle}>
