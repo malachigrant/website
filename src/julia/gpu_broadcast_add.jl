@@ -6,5 +6,5 @@ b_d = CUDA.ones(Int32, N)
 c_d = CUDA.zeros(Int32, N)
 
 function cuArray_add()
-  CUDA.@sync c_d .= a_d + b_d
+  CUDA.@sync c_d .= a_d .+ b_d
 end

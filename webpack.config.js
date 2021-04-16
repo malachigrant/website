@@ -87,7 +87,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: require('html-webpack-template'),
       appMountId: 'root',
-      title: 'My Website',
+      title: 'Julia How-To Guide',
     }),
   ],
   devServer: {
