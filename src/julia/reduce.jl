@@ -18,7 +18,7 @@ end
 function parallel_reduce()
   for i = Int(log2(N))-1:-1:0
     k = 2^i
-    Base.Threads.@threads for j = 1:k
+    Threads.@threads for j = 1:k
       @inbounds A[j] = A[j] + A[j + k]
     end
   end
